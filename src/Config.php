@@ -26,7 +26,7 @@ class Config extends PhpCsFixerConfig
     public function getRules(): array
     {
         return [
-            '@PSR2' => true,
+            '@PSR12' => true,
             'array_syntax' => ['syntax' => 'short'],
             'php_unit_method_casing' => false,
             'trailing_comma_in_multiline_array' => true,
