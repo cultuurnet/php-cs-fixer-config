@@ -1,0 +1,14 @@
+{
+    "name": "publiq/php-cs-fixer-config",
+    "description": "Configuration for PHP Coding Standards Fixer to be used on all PHP projects at Publiq",
+    "type": "library",
+    "license": "GPL-3.0-only",
+    "authors": [
+        {
+            "name": "Publiq vzw",
+            "email": "info@publiq.be"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {}
+}
