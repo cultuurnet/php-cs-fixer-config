@@ -20,7 +20,7 @@ return Publiq\PhpCsFixer\Config::fromFolders(
 You can add the following to your composer file for ease of use
 ```
 "scripts": {
-  "phpcs": "php-cs-fixer fix -v --diff --dry-run",
-  "phpcs-fix": "php-cs-fixer fix -v --diff"
+  "cs": "php-cs-fixer fix -v --diff --dry-run",
+  "cs-fix": "php-cs-fixer fix -v --diff"
 }
 ```
