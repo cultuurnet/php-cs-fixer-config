@@ -1,0 +1,26 @@
+name: CI
+
+on: push
+
+jobs:
+    coding-standards:
+        runs-on: ubuntu-latest
+        strategy:
+            matrix:
+                php-versions: ['7.1', '7.2', '7.3', '7.4', '8.0']
+        name: PHP ${{ matrix.php-versions }}
+        steps:
+            - name: 📤 Checkout project
+              uses: actions/checkout@v2
+
+            - name: 🐘 Install PHP
+              uses: shivammathur/setup-php@v2
+              with:
+                  php-version: ${{ matrix.php-versions }}
+                  tools: composer
+
+            - name: 📦 Install dependencies
+              run: composer update
+
+            - name: ✅ Run php-cs-fixer
+              run: composer cs
