@@ -9,6 +9,7 @@ composer require --dev publiq/php-cs-fixer-config
 
 Add the following to the `.php_cs` file in the root of your repository and modify based on your application.
 ```php
+<?php
 return Publiq\PhpCsFixer\Config::fromFolders(
     [
         'src/',
