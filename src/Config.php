@@ -27,6 +27,11 @@ class Config extends PhpCsFixerConfig
     {
         return [
             '@PSR2' => true,
+            'array_syntax' => ['syntax' => 'short'],
+            'php_unit_method_casing' => false,
+            'trailing_comma_in_multiline_array' => true,
+            'no_trailing_comma_in_singleline_array' => true,
+            'no_unused_imports' => true,
         ];
     }
 }
