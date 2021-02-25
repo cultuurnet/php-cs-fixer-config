@@ -13,5 +13,10 @@
     "require": {
         "php": "^7.1 || ^8.0",
         "friendsofphp/php-cs-fixer": "^2.18"
+    },
+    "autoload": {
+        "psr-4": {
+            "Publiq\\PhpCsFixer\\": "src"
+        }
     }
 }
