@@ -16,6 +16,8 @@ class Config extends PhpCsFixerConfig
 
     public function getRules(): array
     {
-        return [];
+        return [
+            '@PSR2' => true,
+        ];
     }
 }
