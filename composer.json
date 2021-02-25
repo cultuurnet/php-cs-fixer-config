@@ -18,5 +18,9 @@
         "psr-4": {
             "Publiq\\PhpCsFixer\\": "src"
         }
+    },
+    "scripts": {
+        "phpcs": "php-cs-fixer fix -v --diff --dry-run",
+        "phpcs-fix": "php-cs-fixer fix -v --diff"
     }
 }
