@@ -33,7 +33,7 @@ final class Config extends PhpCsFixerConfig
         $clone = clone $this;
         $clone->strict = false;
 
-        return $this;
+        return $clone;
     }
 
     public function getRules(): array
