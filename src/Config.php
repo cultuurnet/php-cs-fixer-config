@@ -32,6 +32,13 @@ class Config extends PhpCsFixerConfig
             'trailing_comma_in_multiline_array' => true,
             'no_trailing_comma_in_singleline_array' => true,
             'no_unused_imports' => true,
+            'concat_space' => ['spacing' => 'one'],
+            'modernize_types_casting' => true,
+            'no_superfluous_phpdoc_tags' => true,
+            'phpdoc_no_useless_inheritdoc' => true,
+            'phpdoc_var_without_name' => true,
+            'protected_to_private' => true,
+            'single_quote' => true,
         ];
     }
 }
