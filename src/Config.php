@@ -9,7 +9,10 @@ use PhpCsFixer\Finder;
 
 final class Config extends PhpCsFixerConfig
 {
-    private bool $strict = true;
+    /**
+     * @var bool
+     */
+    private $strict = true;
 
     public function __construct()
     {
