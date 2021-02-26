@@ -7,8 +7,13 @@ namespace Publiq\PhpCsFixer;
 use PhpCsFixer\Config as PhpCsFixerConfig;
 use PhpCsFixer\Finder;
 
-class Config extends PhpCsFixerConfig
+final class Config extends PhpCsFixerConfig
 {
+    /**
+     * @var bool
+     */
+    private $strict = true;
+
     public function __construct()
     {
         parent::__construct('publiq');
@@ -23,7 +28,35 @@ class Config extends PhpCsFixerConfig
         );
     }
 
+    public function legacy(): self
+    {
+        $clone = clone $this;
+        $clone->strict = false;
+
+        return $this;
+    }
+
     public function getRules(): array
+    {
+        $rules = $this->getCommonRules();
+        if ($this->strict) {
+            $rules = array_merge(
+                $rules,
+                $this->getStrictRules()
+            );
+        }
+
+        return $rules;
+    }
+
+    public function getStrictRules(): array
+    {
+        return [
+            'final_class' => true,
+        ];
+    }
+
+    public function getCommonRules(): array
     {
         return [
             '@PSR12' => true,
@@ -41,6 +74,7 @@ class Config extends PhpCsFixerConfig
             'single_quote' => true,
             'no_empty_comment' => true,
             'no_empty_phpdoc' => true,
+            'declare_strict_types' => true,
         ];
     }
 }
