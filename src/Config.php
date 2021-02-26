@@ -39,6 +39,7 @@ class Config extends PhpCsFixerConfig
             'phpdoc_var_without_name' => true,
             'protected_to_private' => true,
             'single_quote' => true,
+            'no_empty_comment' => true,
         ];
     }
 }
