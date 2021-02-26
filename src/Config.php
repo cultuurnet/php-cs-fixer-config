@@ -41,6 +41,8 @@ class Config extends PhpCsFixerConfig
             'single_quote' => true,
             'no_empty_comment' => true,
             'no_empty_phpdoc' => true,
+            'declare_strict_types' => true,
+            'final_class' => true,
         ];
     }
 }
