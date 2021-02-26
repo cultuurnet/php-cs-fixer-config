@@ -7,7 +7,7 @@ namespace Publiq\PhpCsFixer;
 use PhpCsFixer\Config as PhpCsFixerConfig;
 use PhpCsFixer\Finder;
 
-class Config extends PhpCsFixerConfig
+final class Config extends PhpCsFixerConfig
 {
     public function __construct()
     {
