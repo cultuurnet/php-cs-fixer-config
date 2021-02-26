@@ -9,6 +9,8 @@ use PhpCsFixer\Finder;
 
 final class Config extends PhpCsFixerConfig
 {
+    private bool $strict = true;
+
     public function __construct()
     {
         parent::__construct('publiq');
@@ -23,7 +25,35 @@ final class Config extends PhpCsFixerConfig
         );
     }
 
+    public function legacy(): self
+    {
+        $clone = clone $this;
+        $clone->strict = false;
+
+        return $this;
+    }
+
     public function getRules(): array
+    {
+        $rules = $this->getCommonRules();
+        if ($this->strict) {
+            $rules = array_merge(
+                $rules,
+                $this->getStrictRules()
+            );
+        }
+
+        return $rules;
+    }
+
+    public function getStrictRules(): array
+    {
+        return [
+            'final_class' => true,
+        ];
+    }
+
+    public function getCommonRules(): array
     {
         return [
             '@PSR12' => true,
