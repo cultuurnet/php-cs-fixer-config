@@ -42,7 +42,6 @@ final class Config extends PhpCsFixerConfig
             'no_empty_comment' => true,
             'no_empty_phpdoc' => true,
             'declare_strict_types' => true,
-            'final_class' => true,
         ];
     }
 }
