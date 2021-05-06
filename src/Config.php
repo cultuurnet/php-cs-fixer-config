@@ -62,7 +62,7 @@ final class Config extends PhpCsFixerConfig
             '@PSR12' => true,
             'array_syntax' => ['syntax' => 'short'],
             'php_unit_method_casing' => false,
-            'trailing_comma_in_multiline_array' => true,
+            'trailing_comma_in_multiline' => ['elements' => ['arrays']],
             'no_trailing_comma_in_singleline_array' => true,
             'no_unused_imports' => true,
             'concat_space' => ['spacing' => 'one'],
